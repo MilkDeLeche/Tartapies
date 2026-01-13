@@ -3,7 +3,10 @@ import io from 'socket.io-client';
 
 // AUTO-DETECT ENVIRONMENT
 // If localhost, use localhost. If deployed, use the Render URL.
-const BACKEND_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+const BACKEND_URL = import.meta.env.VITE_API_URL || 
+  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? "http://localhost:3001" 
+    : "https://tartapies.onrender.com");
 const socket = io.connect(BACKEND_URL);
 
 function App() {
