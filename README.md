@@ -55,11 +55,29 @@ The client will run on `http://localhost:5173` by default.
 ## Environment Variables
 
 ### Client (.env)
-- `VITE_API_URL` - API server URL (default: http://localhost:3000)
+- `VITE_API_URL` - API server URL 
+  - Local: `http://localhost:3001`
+  - Production: `https://tartapies.onrender.com`
 
 ### Server
-- `PORT` - Server port (default: 3000)
-- `CLIENT_URL` - Client URL for CORS (default: http://localhost:5173)
+- `PORT` - Server port (default: 3001, or set by Render automatically)
+- `NODE_ENV` - Set to `production` on Render
+
+## Deployment
+
+### Backend (Render)
+- **Live URL**: https://tartapies.onrender.com
+- Deployed on Render.com as a Web Service
+- Root Directory: `server`
+- Build Command: `npm install`
+- Start Command: `npm start`
+
+### Frontend (Netlify)
+- Configure environment variable:
+  - `VITE_API_URL` = `https://tartapies.onrender.com`
+- Base Directory: `client`
+- Build Command: `npm run build`
+- Publish Directory: `client/dist`
 
 ## Development
 
