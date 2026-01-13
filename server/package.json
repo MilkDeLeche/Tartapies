@@ -1,20 +1,14 @@
 {
-  "name": "tartapies-server",
+  "name": "server",
   "version": "1.0.0",
-  "description": "Tartapies game server",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node --watch index.js"
+    "start": "node index.js"
   },
-  "keywords": ["game", "socket.io", "express"],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "socket.io": "^4.6.1",
-    "cors": "^2.8.5"
+    "socket.io": "^4.7.2"
   }
 }
 
